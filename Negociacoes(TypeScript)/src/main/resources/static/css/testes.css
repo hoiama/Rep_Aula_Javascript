@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+#grupo-legenda{
+	margin-top: 20px;
+}
+
+.center {
+	position: relative;
+	margin: auto;
+}
+
+.paciente-invalido {
+	color: red;
+}
+
+.float-left {
+	float: left;
+}
+
+.erros {
+	color: red;
+}
+
+.zerar {
+	color: black;
+}
+
+.invisivel {
+	display: none;
+}
+
+.div-mestre {
+	width: 900px;
+	position: relative;
+	margin: auto;
+	top: 100px;
+	padding: 30px;
+	background-color: #fcaf3e;
+}
+
+/* .table{ */
+/* 	width: 700px;	 */
+/* } */
+.apagarDevagar {
+	opacity: 0;
+	transition: 0.8s;
+}
+
+.aparecerDevagar {
+	opacity: 100;
+	transition: 0.8s;
+}
+
+/* #formulario{ */
+/* 	width: 700px; */
+/* } */
+.filtro {
+	width: 200px;
+	margin-bottom: 10px;
+}
