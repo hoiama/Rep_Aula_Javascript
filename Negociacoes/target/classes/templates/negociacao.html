@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Negociações</title>
+    <link rel="stylesheet" href="framework/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="framework/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/negociacao.css">
+</head>
+<body>
+ <h1 class="text-center">Negociações</h1>
+    
+    <div class="container">  
+	    <p id="mensagem" ></p>
+	    
+	    <form id="formulario" class="form" onsubmit="negociacaoController.adiciona(event)">
+	        
+	        <div class="row">
+		        <div class="form-group col-md-4">
+		            <label for="data">Data</label>
+		            <input type="date" id="data" class="form-control"/>        
+		        </div>    
+		        
+		        <div class="form-group col-md-4">
+		            <label for="quantidade">Quantidade</label>
+		            <input type="number" id="quantidade" min="1" step="1"  class="form-control" value="1"/>
+		        </div>
+		        
+		        <div class="form-group col-md-4">
+		            <label for="valor">Valor</label>
+		            <input id="valor" type="number" class="form-control"  value="1.0" />
+		        </div>
+	         </div>
+	        <button class="btn btn-primary" type="submit">Incluir</button>
+	    </form>
+	    
+	    <div class="text-center">
+	        <button class="btn btn-primary text-center" type="button" onclick="negociacaoController.apagarLista(event)">
+	            Apagar
+	        </button>
+	        <button class="btn btn-primary text-center" type="button" onclick="negociacaoController.post(event)">
+	            Post
+	        </button>
+	    </div> 
+	    <br>
+	    <div id="negociacaoView"></div>
+    </div>
+    <script src="javascript/app-negociacao/dao/NegociacaoDao.js"></script>
+    <script src="javascript/app-negociacao/service/ConnectionFactory.js"></script>
+    <script src="javascript/app-negociacao/model/ListaNegociacao.js"></script>
+    <script src="javascript/app-negociacao/view/ViewTemplate.js"></script>
+    <script src="javascript/app-negociacao/view/MensagemView.js"></script>
+    <script src="javascript/app-negociacao/view/NegociacaoView.js"></script>
+    <script src="javascript/app-negociacao/helper/DateHelper.js"></script>
+    <script src="javascript/app-negociacao/model/Negociacao.js"></script>
+    <script src="javascript/app-negociacao/controller/NegociacaoController.js"></script>
+    <script src="javascript/app-negociacao/service/ProxyFactory.js"></script>
+    <script src="javascript/app-negociacao/helper/Bind.js"></script>
+    <script src="javascript/app-negociacao/service/HttpService.js"></script>
+    <script src="javascript/app-negociacao/service/ServerNegociacao.js"></script>
+    <script src="javascript/app-negociacao/model/PrincipalNegociacao.js"></script>
+</body>
+</html>
